@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import "antd/dist/antd.css";
+import "animate.css";
+import { Layout } from "antd";
+import AppHeader from "./components/common/AppHeader";
+import Home from "./components/Home";
+import About from "./components/About";
+import Features from "./components/Features.tsx";
+import Works from "./components/Works";
+import Faq from "./components/Faq";
+import Pricing from "./components/Pricing";
+import Contact from "./components/Contact";
+import AppFooter from "./components/common/AppFooter";
 
-function App() {
+const { Header, Content, Footer }: any = Layout;
+
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout className="mainLayout">
+      <Header>
+        <AppHeader />
+        <div className="logo" />
+      </Header>
+      <Content>
+        <Home />
+        <About />
+        <Features />
+        <Works />
+        <Faq />
+        <Pricing />
+        <Contact />
+      </Content>
+      <Footer>
+        <AppFooter />
+      </Footer>
+    </Layout>
   );
 }
 
-export default App;
