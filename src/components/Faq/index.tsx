@@ -8,19 +8,17 @@ const Faq = () => {
     <div id="faq" className="block faqBlock">
       <div className="container-fluid">
         <div className="titleHolder">
-          <h2>Frequently Asked Questions</h2>
+          <h2>Câu hỏi thường gặp (FAQ)</h2>
           <p>
-            Quidem reiciendis iure, aperiam blanditiis. Alias esse, nam, ea quam
+            Dưới đây là một số câu hỏi thường gặp khi du khách đến với Côn Đảo
           </p>
         </div>
         <Collapse defaultActiveKey={["1"]}>
-          <Panel header="How to setup the theme?" key="1">
+          <Panel header="Di chuyển đến Côn Đảo mất khoảng bao lâu?" key="1">
             <p>
-              Ut per tempor latine fuisset, cu quod posidonium vix. Mei cu erant
-              bonorum, te ius vide maiorum hendrerit. In alii instructior vix,
-              vis et elit maluisset, usu recusabo atomorum ut. Nibh diceret
-              dolores vix et, id omnis adhuc maiestatis vim, ei mel legendos
-              mnesarchum argumentum. Semper nusquam urbanitas sea te.
+              Để đi đến Côn Đảo, bạn có thể di chuyển bằng máy bay từ TP.HCM,
+              Cần Thơ, Hà Nội, Hải Phòng, Đà Nẵng hoặc tàu thủy từ Vũng Tàu, Cần
+              Thơ
             </p>
           </Panel>
           <Panel header="Can I change plan or cancel at any time?" key="2">
@@ -71,13 +69,8 @@ const Faq = () => {
           </Panel>
         </Collapse>
         <div className="quickSupport">
-          <h3>Want quick support?</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
-            velit necessitatibus praesentium aliquid eos in neque recusandae,
-            incidunt esse dolore voluptatum nesciunt quod soluta consequuntur
-            voluptatibus ab excepturi nobis! Porro!
-          </p>
+          <h3>Hotline</h3>
+          <p>0869.315.579</p>
           <Button type="primary" size="large">
             <i className="fas fa-envelope"></i> Email your question
           </Button>

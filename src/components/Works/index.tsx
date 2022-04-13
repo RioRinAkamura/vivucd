@@ -22,7 +22,7 @@ const Works = () => {
             </Button>
           </div>
           <Modal
-            title="Woocommerce Tutorial"
+            title="Khám phá Côn Đảo ngay nào"
             visible={visible}
             onCancel={() => setVisible(false)}
             footer={null}
@@ -30,10 +30,10 @@ const Works = () => {
             width={800}
           >
             <iframe
-              title="Woocommerce Tutorial"
+              title="Khám phá Côn Đảo ngay nào"
               width="100%"
               height="350"
-              src="https://www.youtube.com/embed/8f8_JYIzOno?list=PLiUrl-SQRR7LQINGQGE99pXWDuKq4SxfU"
+              src="https://www.youtube.com/watch?v=5kT9LrDLoT4"
             ></iframe>
           </Modal>
         </div>

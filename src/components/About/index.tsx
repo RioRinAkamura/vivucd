@@ -1,5 +1,6 @@
 import { Carousel, Col, Row } from "antd";
 import React from "react";
+import styled from "styled-components";
 import slide1 from "../../assets/images/slide1.png";
 import slide2 from "../../assets/images/slide2.png";
 import slide3 from "../../assets/images/slide3.png";
@@ -37,15 +38,15 @@ const About = () => {
           <p>Côn Đảo là một huyện trực thuộc tỉnh Bà Rịa - Vũng Tàu</p>
         </div>
         <div className="contentHolder">
-          <Carousel autoplay>
+          <CarouselWrapper autoplay>
             <div>
               <Row gutter={[16, 16]} style={{ display: "flex" }}>
                 <Col md={{ span: 12 }}>
                   <img src={slide1} alt="natural" width={"100%"} />
                 </Col>
-                <Col md={{ span: 8 }}>
+                <Col md={{ span: 12 }}>
                   <h2>Thiên nhiên Côn Đảo</h2>
-                  <p>
+                  <p style={{ textAlign: "justify" }}>
                     Một khi đã bước chân đến với Côn Đảo thì du khách đừng nên
                     bỏ qua một số địa điểm như Hòn Bà, Vịnh Đầm Tre, bãi Ông
                     Đụng, Hòn Tài… để thưởng thức cảnh quan thiên nhiên đa dạng,
@@ -60,9 +61,9 @@ const About = () => {
                 <Col md={{ span: 12 }}>
                   <img src={slide2} alt="natural" width={"100%"} />
                 </Col>
-                <Col md={{ span: 8 }}>
+                <Col md={{ span: 12 }}>
                   <h2>Thiên nhiên Côn Đảo</h2>
-                  <p>
+                  <p style={{ textAlign: "justify" }}>
                     Một khi đã bước chân đến với Côn Đảo thì du khách đừng nên
                     bỏ qua một số địa điểm như Hòn Bà, Vịnh Đầm Tre, bãi Ông
                     Đụng, Hòn Tài… để thưởng thức cảnh quan thiên nhiên đa dạng,
@@ -77,9 +78,9 @@ const About = () => {
                 <Col md={{ span: 12 }}>
                   <img src={slide3} alt="natural" width={"100%"} />
                 </Col>
-                <Col md={{ span: 8 }}>
+                <Col md={{ span: 12 }}>
                   <h2>Thiên nhiên Côn Đảo</h2>
-                  <p>
+                  <p style={{ textAlign: "justify" }}>
                     Một khi đã bước chân đến với Côn Đảo thì du khách đừng nên
                     bỏ qua một số địa điểm như Hòn Bà, Vịnh Đầm Tre, bãi Ông
                     Đụng, Hòn Tài… để thưởng thức cảnh quan thiên nhiên đa dạng,
@@ -89,7 +90,7 @@ const About = () => {
                 </Col>
               </Row>
             </div>
-          </Carousel>
+          </CarouselWrapper>
         </div>
         <Row gutter={[16, 16]}>
           {items.map((item) => (
@@ -108,3 +109,18 @@ const About = () => {
 };
 
 export default About;
+
+const CarouselWrapper = styled(Carousel)`
+  > .slick-dots li button {
+    width: 12px;
+    height: 4px;
+    /* border-radius: 100%; */
+    background: #8b8b8b;
+  }
+  > .slick-dots li.slick-active button {
+    width: 20px;
+    height: 4px;
+    /* border-radius: 100%; */
+    background: #1890ff;
+  }
+`;

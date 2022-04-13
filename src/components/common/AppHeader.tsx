@@ -16,16 +16,18 @@ const AppHeader = () => {
   return (
     <div className="container-fluid">
       <div className="header">
-        <div className="logo">
-          <img src={logo} alt="" height={64} />
-        </div>
+        <a href="/">
+          <div className="logo">
+            <img src={logo} alt="" height={64} />
+          </div>
+        </a>
         <div className="mobileHidden">
           <Anchor targetOffset={65}>
             <Link className="headerMenu" href="#home" title="Trang chủ" />
             <Link className="headerMenu" href="#about" title="Giới thiệu" />
             <Link className="headerMenu" href="#booking" title="Dịch vụ" />
             <Link className="headerMenu" href="#pricing" title="Thuê xe" />
-            <Link className="headerMenu" href="#faq" title="Đặt phòng" />
+            <Link className="headerMenu" href="#faq" title="FAQ" />
             <Link className="headerMenu" href="#contact" title="Liên hệ" />
             {/* <Link className="headerMenu" href="" title="">
               <i className="fas fa-globe"></i>
@@ -43,7 +45,7 @@ const AppHeader = () => {
               <Link href="#about" title="Giới thiệu" />
               <Link href="#booking" title="Dịch vụ" />
               <Link href="#pricing" title="Thuê xe" />
-              <Link href="#faq" title="Đặt phòng" />
+              <Link href="#faq" title="FAQ" />
               <Link href="#contact" title="Liên hệ" />
             </Anchor>
           </Drawer>

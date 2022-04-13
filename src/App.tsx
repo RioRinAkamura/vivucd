@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import "animate.css";
 import { Layout } from "antd";
 import AppHeader from "./components/common/AppHeader";
