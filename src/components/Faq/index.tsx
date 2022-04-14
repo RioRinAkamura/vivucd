@@ -13,7 +13,7 @@ const Faq = () => {
             Dưới đây là một số câu hỏi thường gặp khi du khách đến với Côn Đảo
           </p>
         </div>
-        <Collapse defaultActiveKey={["1"]}>
+        <Collapse>
           <Panel header="Di chuyển đến Côn Đảo mất khoảng bao lâu?" key="1">
             <p>
               Để đi đến Côn Đảo, bạn có thể di chuyển bằng máy bay từ TP.HCM,

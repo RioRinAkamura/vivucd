@@ -11,18 +11,13 @@ const AppFooter = () => {
         </div>
         <ul className="socials">
           <li>
-            <a href="https://www.facebook.com/">
+            <a href="https://www.facebook.com/Vi-vu-C%C3%B4n-%C4%90%E1%BA%A3o-100683385910447/">
               <i className="fab fa-facebook-f"></i>
             </a>
           </li>
           <li>
             <a href="https://www.twitter.com/">
               <i className="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/">
-              <i className="fab fa-linkedin-in"></i>
             </a>
           </li>
           <li>

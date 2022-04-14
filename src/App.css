@@ -269,6 +269,12 @@ block
 about
 ----- 
 */
+/* .aboutBlock {
+  background: url("assets/images/bg-hero - Copy.jpg") no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+} */
+
 .aboutBlock .contentHolder {
   text-align: center;
   margin: 0 0 50px;

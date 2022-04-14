@@ -1,16 +1,29 @@
-import { Anchor, Drawer, Button } from "antd";
+import { Anchor, Drawer, Button, Menu } from "antd";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import logo from "../../assets/images/logo1.png";
 
 const { Link } = Anchor;
+const { SubMenu } = Menu;
 
 const AppHeader = () => {
-  const [visible, setVisible] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const [visible, setVisible] = useState<boolean>(false);
   const showDrawer = () => {
     setVisible(true);
   };
   const onClose = () => {
     setVisible(false);
+  };
+
+  const language = (
+    <i className="fas fa-globe" style={{ fontSize: 16, opacity: 0.9 }}></i>
+  );
+
+  const onLanguageChange = (lang: string) => {
+    console.log("tranlate", lang);
+    i18n.changeLanguage(lang);
   };
 
   return (
@@ -22,18 +35,33 @@ const AppHeader = () => {
           </div>
         </a>
         <div className="mobileHidden">
-          <Anchor targetOffset={65}>
-            <Link className="headerMenu" href="#home" title="Trang chủ" />
-            <Link className="headerMenu" href="#about" title="Giới thiệu" />
-            <Link className="headerMenu" href="#booking" title="Dịch vụ" />
-            <Link className="headerMenu" href="#pricing" title="Thuê xe" />
-            <Link className="headerMenu" href="#faq" title="FAQ" />
-            <Link className="headerMenu" href="#contact" title="Liên hệ" />
-            {/* <Link className="headerMenu" href="" title="">
-              <i className="fas fa-globe"></i>
-            </Link> */}
-            {/* <Link className="headerMenu" href="/" title="Hotline: 0983400222" /> */}
-          </Anchor>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Anchor targetOffset={65}>
+              <Link
+                className="headerMenu"
+                href="#home"
+                title={t("navbar.home")}
+              />
+              <Link
+                className="headerMenu"
+                href="#about"
+                title={t("navbar.about")}
+              />
+              <Link className="headerMenu" href="#booking" title="Dịch vụ" />
+              <Link className="headerMenu" href="#pricing" title="Thuê xe" />
+              <Link className="headerMenu" href="#faq" title="FAQ" />
+              <Link className="headerMenu" href="#contact" title="Liên hệ" />
+            </Anchor>
+            <Menu expandIcon=" " style={{}}>
+              <SubMenu
+                style={{ textAlign: "right", width: 38 }}
+                title={language}
+              >
+                <Menu.Item>Tiếng Việt</Menu.Item>
+                <Menu.Item>English</Menu.Item>
+              </SubMenu>
+            </Menu>
+          </div>
         </div>
         <div className="mobileVisible">
           <Button type="primary" onClick={showDrawer}>
@@ -48,6 +76,16 @@ const AppHeader = () => {
               <Link href="#faq" title="FAQ" />
               <Link href="#contact" title="Liên hệ" />
             </Anchor>
+            <Menu>
+              <SubMenu title={language}>
+                <Menu.Item onClick={() => onLanguageChange("vi")}>
+                  Tiếng Việt
+                </Menu.Item>
+                <Menu.Item onClick={() => onLanguageChange("en")}>
+                  English
+                </Menu.Item>
+              </SubMenu>
+            </Menu>
           </Drawer>
         </div>
       </div>

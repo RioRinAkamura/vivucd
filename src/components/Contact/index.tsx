@@ -7,12 +7,12 @@ const Contact = () => {
     <div id="contact" className="block contactBlock">
       <div className="container-fluid">
         <div className="titleHolder">
-          <h2>Get in Touch</h2>
-          <p>Dolore nam rerum obcaecati fugit odio nobis Molestiae rerum</p>
+          <h2>Liên hệ hỗ trợ</h2>
+          <p>Điền thông tin và nội dung thắc mắc để được hỗ trợ, xin cảm ơn!</p>
         </div>
         <Form
-          name="normal_login"
-          className="login-form"
+          name="contact"
+          className="contact-form"
           initialValues={{ remember: true }}
         >
           <Form.Item
@@ -41,14 +41,23 @@ const Contact = () => {
           >
             <Input placeholder="Email Address" />
           </Form.Item>
-          <Form.Item name="telephone">
-            <Input placeholder="Telephone" />
-          </Form.Item>
-          <Form.Item name="subject">
-            <Input placeholder="Subject" />
+          <Form.Item
+            name="telephone"
+            rules={[
+              {
+                type: "number",
+                message: "The input is not valid phone number",
+              },
+              {
+                required: true,
+                message: "Please input your Phone number",
+              },
+            ]}
+          >
+            <Input placeholder="Phone number" />
           </Form.Item>
           <Form.Item name="message">
-            <TextArea />
+            <TextArea placeholder="Message" />
           </Form.Item>
           <Form.Item>
             <Form.Item

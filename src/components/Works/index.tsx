@@ -11,10 +11,8 @@ const Works = () => {
       <div id="works" className="block worksBlock">
         <div className="container-fluid">
           <div className="titleHolder">
-            <h2>How it works</h2>
-            <p>
-              Perspiciatis vero similique, ut ducimus modi ipsam autem tempora
-            </p>
+            <h2>Khám phá ngay</h2>
+            <p>Hãy trải nghiệm </p>
           </div>
           <div className="contentHolder">
             <Button size="large" onClick={showModal}>
@@ -33,7 +31,7 @@ const Works = () => {
               title="Khám phá Côn Đảo ngay nào"
               width="100%"
               height="350"
-              src="https://www.youtube.com/watch?v=5kT9LrDLoT4"
+              src="https://www.youtube.com/watch?v=3CTjUXtrGHk&t=154s&ab_channel=DuL%E1%BB%8BchC%C3%B4n%C4%90%E1%BA%A3o"
             ></iframe>
           </Modal>
         </div>
