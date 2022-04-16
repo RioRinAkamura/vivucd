@@ -15,7 +15,7 @@ export const translationsJson = {
   },
 };
 
-// const Languages = ["en", "vi"];
+const Languages = ["en", "vi"];
 
 export const i18n = i18next
   .use(Backend)
@@ -30,7 +30,7 @@ export const i18n = i18next
     resources: translationsJson,
     fallbackLng: "vi",
     debug: true,
-    // whitelist: Languages,
+    whitelist: Languages,
     interpolation: {
       escapeValue: false,
     },
