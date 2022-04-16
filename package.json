@@ -1,4 +1,5 @@
 {
+  "homepage": "https://RioRinAkamura.github.io/vvcd",
   "name": "vvcd",
   "version": "0.1.0",
   "private": true,
@@ -33,7 +34,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -54,3 +56,4 @@
     ]
   }
 }
+
