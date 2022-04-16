@@ -169,7 +169,7 @@ export const About = () => {
             </Col>
           ))}
         </Row>
-        <Row gutter={[16, 16]}>
+        {/* <Row gutter={[16, 16]}>
           <Col md={{ span: 8 }}>
             <Card
               cover={
@@ -233,7 +233,7 @@ export const About = () => {
               />
             </Card>
           </Col>
-        </Row>
+        </Row> */}
       </div>
     </div>
   );
