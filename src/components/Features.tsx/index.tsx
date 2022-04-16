@@ -8,16 +8,16 @@ import image6 from "../../assets/images/advanced-option.jpg";
 import { Card, Col, Row } from "antd";
 import Meta from "antd/lib/card/Meta";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const Features = () => {
+  const { t } = useTranslation();
   return (
     <div id="booking" className="block featureBlock">
       <div className="container-fluid">
         <div className="titleHolder">
-          <h2>Bạn đã đặt vé để đến với Côn Đảo chưa?</h2>
-          <p>
-            Để đi đến Côn Đảo bạn có thể di chuyển bằng máy bay hoặc tàu thủy
-          </p>
+          <h2>{t("service.title")}</h2>
+          <p>{t("service.desc")}</p>
         </div>
         <div className="contentHolder">
           <Row gutter={[16, 16]}>
@@ -26,28 +26,28 @@ const Features = () => {
                 hoverable
                 cover={<ImgStyle alt="airplane" src={airplane} />}
               >
-                <Meta title="Đặt vé máy bay" />
+                <Meta title={t("service.plane")} />
                 {/* <p>~1tr8/người (tùy thời điểm)</p> */}
               </CardStyle>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
               <CardStyle hoverable cover={<ImgStyle alt="ship" src={ship} />}>
-                <Meta title="Đặt vé tàu" />
+                <Meta title={t("service.boat")} />
               </CardStyle>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
               <CardStyle hoverable cover={<ImgStyle alt="hotel" src={hotel} />}>
-                <Meta title="Đặt phòng khách sạn" />
+                <Meta title={t("service.hotel")} />
               </CardStyle>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
               <CardStyle hoverable cover={<ImgStyle alt="tour" src={tour} />}>
-                <Meta title="Đặt tour" />
+                <Meta title={t("service.tour")} />
               </CardStyle>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
               <CardStyle hoverable cover={<ImgStyle alt="hiring" src={bike} />}>
-                <Meta title="Thuê xe" />
+                <Meta title={t("service.bike")} />
               </CardStyle>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>

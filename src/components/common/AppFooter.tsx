@@ -2,7 +2,7 @@ import { BackTop } from "antd";
 import React from "react";
 import logo from "../../assets/images/logo1.png";
 
-const AppFooter = () => {
+export const AppFooter = () => {
   return (
     <div className="container-fluid">
       <div className="footer">
@@ -41,5 +41,3 @@ const AppFooter = () => {
     </div>
   );
 };
-
-export default AppFooter;

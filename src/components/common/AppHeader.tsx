@@ -6,7 +6,7 @@ import logo from "../../assets/images/logo1.png";
 const { Link } = Anchor;
 const { SubMenu } = Menu;
 
-const AppHeader = () => {
+export const AppHeader = () => {
   const { t, i18n } = useTranslation();
 
   const [visible, setVisible] = useState<boolean>(false);
@@ -22,7 +22,6 @@ const AppHeader = () => {
   );
 
   const onLanguageChange = (lang: string) => {
-    console.log("tranlate", lang);
     i18n.changeLanguage(lang);
   };
 
@@ -47,18 +46,30 @@ const AppHeader = () => {
                 href="#about"
                 title={t("navbar.about")}
               />
-              <Link className="headerMenu" href="#booking" title="Dịch vụ" />
+              <Link
+                className="headerMenu"
+                href="#booking"
+                title={t("navbar.services")}
+              />
               <Link className="headerMenu" href="#pricing" title="Thuê xe" />
               <Link className="headerMenu" href="#faq" title="FAQ" />
-              <Link className="headerMenu" href="#contact" title="Liên hệ" />
+              <Link
+                className="headerMenu"
+                href="#contact"
+                title={t("navbar.contact")}
+              />
             </Anchor>
             <Menu expandIcon=" " style={{}}>
               <SubMenu
                 style={{ textAlign: "right", width: 38 }}
                 title={language}
               >
-                <Menu.Item>Tiếng Việt</Menu.Item>
-                <Menu.Item>English</Menu.Item>
+                <Menu.Item onClick={() => onLanguageChange("vi")}>
+                  Tiếng Việt
+                </Menu.Item>
+                <Menu.Item onClick={() => onLanguageChange("en")}>
+                  English
+                </Menu.Item>
               </SubMenu>
             </Menu>
           </div>
@@ -69,12 +80,28 @@ const AppHeader = () => {
           </Button>
           <Drawer placement="right" onClose={onClose} visible={visible}>
             <Anchor targetOffset={65}>
-              <Link href="#home" title="Trang chủ" />
-              <Link href="#about" title="Giới thiệu" />
-              <Link href="#booking" title="Dịch vụ" />
-              <Link href="#pricing" title="Thuê xe" />
-              <Link href="#faq" title="FAQ" />
-              <Link href="#contact" title="Liên hệ" />
+              <Link
+                className="headerMenu"
+                href="#home"
+                title={t("navbar.home")}
+              />
+              <Link
+                className="headerMenu"
+                href="#about"
+                title={t("navbar.about")}
+              />
+              <Link
+                className="headerMenu"
+                href="#booking"
+                title={t("navbar.services")}
+              />
+              <Link className="headerMenu" href="#pricing" title="Thuê xe" />
+              <Link className="headerMenu" href="#faq" title="FAQ" />
+              <Link
+                className="headerMenu"
+                href="#contact"
+                title={t("navbar.contact")}
+              />
             </Anchor>
             <Menu>
               <SubMenu title={language}>
@@ -92,5 +119,3 @@ const AppHeader = () => {
     </div>
   );
 };
-
-export default AppHeader;

@@ -12,6 +12,7 @@ import {
   EllipsisOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 const { Meta } = Card;
 
@@ -39,13 +40,15 @@ const items = [
   },
 ];
 
-const About = () => {
+export const About = () => {
+  const { t } = useTranslation();
+
   return (
     <div id="about" className="block aboutBlock">
       <div className="container-fluid">
         <div className="titleHolder">
-          <h2>Đôi nét Côn Đảo</h2>
-          <p>Côn Đảo là một huyện trực thuộc tỉnh Bà Rịa - Vũng Tàu</p>
+          <h2>{t("about.title")}</h2>
+          <p>{t("about.desc")}</p>
         </div>
         <div className="contentHolder">
           <CarouselWrapper autoplay>
@@ -55,15 +58,11 @@ const About = () => {
                   <img src={slide1} alt="natural" width={"100%"} />
                 </Col>
                 <Col md={{ span: 12 }}>
-                  <h2>Thiên nhiên Côn Đảo</h2>
+                  <h2>{t("about.naturalTitle")}</h2>
                   <p style={{ textAlign: "justify" }}>
-                    Một khi đã bước chân đến với Côn Đảo thì du khách đừng nên
-                    bỏ qua một số địa điểm như Hòn Bà, Vịnh Đầm Tre, bãi Ông
-                    Đụng, Hòn Tài… để thưởng thức cảnh quan thiên nhiên đa dạng,
-                    sinh động khi có sự kết hợp hài hòa giữa núi rừng và biển
-                    xanh.
+                    {t("about.naturalDesc")}
                   </p>
-                  <h2>Những địa điểm không nên bỏ qua</h2>
+                  <h2> {t("about.placeTitle")}</h2>
                   <div
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
@@ -91,13 +90,11 @@ const About = () => {
                   <img src={slide3} alt="natural" width={"100%"} />
                 </Col>
                 <Col md={{ span: 12 }}>
-                  <h2>Di tích lịch sử</h2>
+                  <h2>{t("about.historyTitle")}</h2>
                   <p style={{ textAlign: "justify" }}>
-                    Côn Đảo - vùng đất của đau thương, là nơi nằm xuống của rất
-                    nhiều chiến sĩ cách mạng cũng như người dân nơi đây. Vì vậy
-                    Côn Đảo sở hữu rất nhiều di tích lịch sử nổi tiếng.
+                    {t("about.historyDesc")}
                   </p>
-                  <h2>Những địa điểm không nên bỏ qua</h2>
+                  <h2> {t("about.placeTitle")}</h2>
                   <div
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
@@ -129,16 +126,11 @@ const About = () => {
                   <img src={slide2} alt="natural" width={"100%"} />
                 </Col>
                 <Col md={{ span: 12 }}>
-                  <h2>Đặc sản Côn Đảo</h2>
+                  <h2> {t("about.specialtiesTitle")}</h2>
                   <p style={{ textAlign: "justify" }}>
-                    Các bạn đã tìm được những món ngon Côn Đảo khi ghé thăm địa
-                    điểm nổi tiếng này chưa? Đây chắc hẳn cũng là một băn khoăn
-                    của rất nhiều bạn trẻ khi tham quan các địa điểm du lịch tại
-                    Côn Đảo. VivuCondao sẽ giới thiệu đến bạn top những món quà
-                    đặc sản Côn Đảo rất đáng để thử một lần vì độ ngon khó
-                    cưỡng.
+                    {t("about.specilitiesDesc")}
                   </p>
-                  <h2>Top những món nên thử khi đến Côn Đảo</h2>
+                  <h2> {t("about.foodTitle")}</h2>
                   <div
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
@@ -246,8 +238,6 @@ const About = () => {
     </div>
   );
 };
-
-export default About;
 
 const CarouselWrapper = styled(Carousel)`
   > .slick-dots li button {

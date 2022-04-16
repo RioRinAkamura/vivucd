@@ -1,12 +1,15 @@
 import { Col, Row } from "antd";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import title1 from "../../assets/images/title1.png";
 import title2 from "../../assets/images/title2.png";
 import title3 from "../../assets/images/title3.png";
 import Button from "../Button";
 
-const Home = () => {
-  const onclickccc = () => {
+export const Home = () => {
+  const { t } = useTranslation();
+
+  const onClickBtn = () => {
     console.log("click");
   };
   return (
@@ -42,17 +45,15 @@ const Home = () => {
                     textAlign: "justify",
                   }}
                 >
-                  In the past, Con Dao Archipelago was known as “hell on earth”.
-                  Now, with a beautiful natural landscape, it has become a
-                  stunning “pearl” that attracts domesticand foreign tourists.
+                  {t("home.text")}
                 </p>
                 <Button
                   className="animate__animated animate__fadeInUp animate__delay-2s"
                   type="primary"
                   size="large"
-                  onClik={onclickccc}
+                  onClick={onClickBtn}
                 >
-                  KHÁM PHÁ NGAY
+                  {t("button.explore")}
                 </Button>
               </Col>
             </Row>
@@ -62,5 +63,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;
