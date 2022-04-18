@@ -2,6 +2,7 @@ import { Anchor, Drawer, Button, Menu } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import logo from "../../assets/images/logo1.png";
+import { Routes, Route, Link as RouterLink } from "react-router-dom";
 
 const { Link } = Anchor;
 const { SubMenu } = Menu;
@@ -36,28 +37,40 @@ export const AppHeader = () => {
         <div className="mobileHidden">
           <div style={{ display: "flex", alignItems: "center" }}>
             <Anchor targetOffset={65}>
-              <Link
-                className="headerMenu"
-                href="#home"
-                title={t("navbar.home")}
-              />
-              <Link
-                className="headerMenu"
-                href="#about"
-                title={t("navbar.about")}
-              />
-              <Link
-                className="headerMenu"
-                href="#booking"
-                title={t("navbar.services")}
-              />
-              <Link className="headerMenu" href="#pricing" title="Thuê xe" />
-              <Link className="headerMenu" href="#faq" title="FAQ" />
-              <Link
-                className="headerMenu"
-                href="#contact"
-                title={t("navbar.contact")}
-              />
+              <RouterLink to="/#home">
+                <Link
+                  className="headerMenu"
+                  href="#home"
+                  title={t("navbar.home")}
+                />
+              </RouterLink>
+              <RouterLink to="/#about">
+                <Link
+                  className="headerMenu"
+                  href="#about"
+                  title={t("navbar.about")}
+                />
+              </RouterLink>
+              <RouterLink to="/#services">
+                <Link
+                  className="headerMenu"
+                  href="#booking"
+                  title={t("navbar.services")}
+                />
+              </RouterLink>
+              <RouterLink to="/#pricing">
+                <Link className="headerMenu" href="#pricing" title="Thuê xe" />
+              </RouterLink>
+              <RouterLink to="/#faq">
+                <Link className="headerMenu" href="#faq" title="FAQ" />
+              </RouterLink>
+              <RouterLink to="/#contact">
+                <Link
+                  className="headerMenu"
+                  href="#contact"
+                  title={t("navbar.contact")}
+                />
+              </RouterLink>
             </Anchor>
             <Menu expandIcon=" " style={{}}>
               <SubMenu

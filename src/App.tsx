@@ -1,21 +1,19 @@
-import React from "react";
-import "./App.css";
-import "antd/dist/antd.min.css";
 import "animate.css";
 import { Layout } from "antd";
-
-import Features from "./components/Features.tsx";
-import Works from "./components/Works";
-import Faq from "./components/Faq";
-import Pricing from "./components/Pricing";
-import Contact from "./components/Contact";
-import { AppHeader } from "./components/common/AppHeader";
-import { Home } from "./components/Home";
-import { About } from "./components/About";
+import "antd/dist/antd.min.css";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
 import { AppFooter } from "./components/common/AppFooter";
+import { AppHeader } from "./components/common/AppHeader";
+import BikeRental from "./components/Features.tsx/components/BikeRental";
+import { BoatTicket } from "./components/Features.tsx/components/BoatTicket";
+import BookHotel from "./components/Features.tsx/components/BookHotel";
+import BookTour from "./components/Features.tsx/components/BookTour";
+import HomePage from "./pages/HomePage";
 
 const { Header, Content, Footer } = Layout;
-function App() {
+export function App() {
   return (
     <>
       <Layout className="mainLayout">
@@ -24,13 +22,15 @@ function App() {
           <div className="logo" />
         </Header>
         <Content>
-          <Home />
-          <About />
-          <Features />
-          <Works />
-          <Faq />
-          <Pricing />
-          <Contact />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+
+            {/* Features Routes */}
+            <Route path="/ve-tau" element={<BoatTicket />} />
+            <Route path="/thue-xe" element={<BikeRental />} />
+            <Route path="/dat-phong-ks" element={<BookHotel />} />
+            <Route path="/book-tour" element={<BookTour />} />
+          </Routes>
         </Content>
         <Footer>
           <AppFooter />
@@ -39,6 +39,4 @@ function App() {
     </>
   );
 }
-
-export default App;
 

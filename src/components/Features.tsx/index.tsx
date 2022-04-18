@@ -9,8 +9,19 @@ import { Card, Col, Row } from "antd";
 import Meta from "antd/lib/card/Meta";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
+import { BoatTicket } from "./components/BoatTicket";
+import { Link, Route, Routes } from "react-router-dom";
 
 const Features = () => {
+  const onPlaneTicket = () => {
+    const win = window.open(
+      `https://www.vietnamairlines.com/vi-vn/v%C3%A9-m%C3%A1y-bay-%C4%91%E1%BA%BFn-c%C3%B4n-%C4%91%E1%BA%A3o`,
+      "_blank"
+    );
+    if (win) {
+      win.focus();
+    }
+  };
   const { t } = useTranslation();
   return (
     <div id="booking" className="block featureBlock">
@@ -25,30 +36,44 @@ const Features = () => {
               <CardStyle
                 hoverable
                 cover={<ImgStyle alt="airplane" src={airplane} />}
+                onClick={onPlaneTicket}
               >
                 <Meta title={t("service.plane")} />
-                {/* <p>~1tr8/người (tùy thời điểm)</p> */}
               </CardStyle>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <CardStyle hoverable cover={<ImgStyle alt="ship" src={ship} />}>
-                <Meta title={t("service.boat")} />
-              </CardStyle>
+              <Link to="/ve-tau">
+                <CardStyle hoverable cover={<ImgStyle alt="ship" src={ship} />}>
+                  <Meta title={t("service.boat")} />
+                </CardStyle>
+              </Link>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <CardStyle hoverable cover={<ImgStyle alt="hotel" src={hotel} />}>
-                <Meta title={t("service.hotel")} />
-              </CardStyle>
+              <Link to="/dat-phong-ks">
+                <CardStyle
+                  hoverable
+                  cover={<ImgStyle alt="hotel" src={hotel} />}
+                >
+                  <Meta title={t("service.hotel")} />
+                </CardStyle>
+              </Link>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <CardStyle hoverable cover={<ImgStyle alt="tour" src={tour} />}>
-                <Meta title={t("service.tour")} />
-              </CardStyle>
+              <Link to="/book-tour">
+                <CardStyle hoverable cover={<ImgStyle alt="tour" src={tour} />}>
+                  <Meta title={t("service.tour")} />
+                </CardStyle>
+              </Link>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <CardStyle hoverable cover={<ImgStyle alt="hiring" src={bike} />}>
-                <Meta title={t("service.bike")} />
-              </CardStyle>
+              <Link to="/thue-xe">
+                <CardStyle
+                  hoverable
+                  cover={<ImgStyle alt="hiring" src={bike} />}
+                >
+                  <Meta title={t("service.bike")} />
+                </CardStyle>
+              </Link>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
               <CardStyle hoverable cover={<ImgStyle alt="Test" src={image6} />}>
