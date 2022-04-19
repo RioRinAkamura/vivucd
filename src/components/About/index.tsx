@@ -1,20 +1,13 @@
-import { Carousel, Col, Row, Card, Avatar } from "antd";
+import { Carousel, Col, Row } from "antd";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
+import seafood from "../../assets/images/seafood.png";
 import slide1 from "../../assets/images/slide1.png";
 import slide2 from "../../assets/images/slide2.png";
 import slide3 from "../../assets/images/slide3.png";
-import turtle from "../../assets/images/turtle.jpg";
 import tuong from "../../assets/images/tuong.png";
-import seafood from "../../assets/images/seafood.png";
-import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-import { useTranslation } from "react-i18next";
-
-const { Meta } = Card;
+import turtle from "../../assets/images/turtle.jpg";
 
 const items = [
   {
@@ -169,71 +162,6 @@ export const About = () => {
             </Col>
           ))}
         </Row>
-        {/* <Row gutter={[16, 16]}>
-          <Col md={{ span: 8 }}>
-            <Card
-              cover={
-                <img
-                  alt="example"
-                  src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                />
-              }
-              actions={[
-                <SettingOutlined key="setting" />,
-                <EditOutlined key="edit" />,
-                <EllipsisOutlined key="ellipsis" />,
-              ]}
-            >
-              <Meta
-                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                title="Card title"
-                description="This is the description"
-              />
-            </Card>
-          </Col>
-          <Col md={{ span: 8 }}>
-            <Card
-              cover={
-                <img
-                  alt="example"
-                  src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                />
-              }
-              actions={[
-                <SettingOutlined key="setting" />,
-                <EditOutlined key="edit" />,
-                <EllipsisOutlined key="ellipsis" />,
-              ]}
-            >
-              <Meta
-                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                title="Card title"
-                description="This is the description"
-              />
-            </Card>
-          </Col>
-          <Col md={{ span: 8 }}>
-            <Card
-              cover={
-                <img
-                  alt="example"
-                  src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                />
-              }
-              actions={[
-                <SettingOutlined key="setting" />,
-                <EditOutlined key="edit" />,
-                <EllipsisOutlined key="ellipsis" />,
-              ]}
-            >
-              <Meta
-                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                title="Card title"
-                description="This is the description"
-              />
-            </Card>
-          </Col>
-        </Row> */}
       </div>
     </div>
   );

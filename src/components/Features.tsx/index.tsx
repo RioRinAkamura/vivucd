@@ -1,16 +1,15 @@
-import React from "react";
-import airplane from "../../assets/images/airplane.jpg";
-import ship from "../../assets/images/ship.jpg";
-import hotel from "../../assets/images/hotel.jpg";
-import tour from "../../assets/images/tour.jpg";
-import bike from "../../assets/images/bike.jpg";
-import image6 from "../../assets/images/advanced-option.jpg";
 import { Card, Col, Row } from "antd";
 import Meta from "antd/lib/card/Meta";
-import styled from "styled-components";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { BoatTicket } from "./components/BoatTicket";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import image6 from "../../assets/images/advanced-option.jpg";
+import airplane from "../../assets/images/airplane.jpg";
+import bike from "../../assets/images/bike.jpg";
+import hotel from "../../assets/images/hotel.jpg";
+import ship from "../../assets/images/ship.jpg";
+import tour from "../../assets/images/tour.jpg";
 
 const Features = () => {
   const onPlaneTicket = () => {
