@@ -28,7 +28,7 @@ export function App() {
           <ScrollToTop>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/vvcd" element={<HomePage />} />
+              <Route path="/vivucd" element={<HomePage />} />
 
               {/* Features Routes */}
               <Route path="/ve-tau" element={<BoatTicket />} />
