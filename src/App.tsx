@@ -1,7 +1,9 @@
-import "animate.css";
-import { Layout } from "antd";
-import "antd/dist/antd.min.css";
 import React from "react";
+import "animate.css";
+import "antd/dist/antd.min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Layout } from "antd";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { AppFooter } from "./components/common/AppFooter";

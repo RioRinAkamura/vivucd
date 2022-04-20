@@ -400,6 +400,7 @@ contact
 footer
 ------
 */
+
 .ant-layout-footer {
   background: #111 !important;
   color: #fff !important;
@@ -478,5 +479,34 @@ responsive
   .mobileHidden {
     display: none;
   }
+}
+
+.spinning {
+  margin: 20px 0;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+.spinning {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 15px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: "" !important;
+}
+
+.slick-list {
+  margin: 0 -5px;
+}
+.slick-slide > div {
+  padding: 0 5px;
 }
 

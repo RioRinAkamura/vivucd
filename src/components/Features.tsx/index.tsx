@@ -32,52 +32,61 @@ const Features = () => {
         <div className="contentHolder">
           <Row gutter={[16, 16]}>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <CardStyle
+              <Card
                 hoverable
                 cover={<ImgStyle alt="airplane" src={airplane} />}
                 onClick={onPlaneTicket}
               >
-                <Meta title={t("service.plane")} />
-              </CardStyle>
+                <Meta
+                  title={t("service.plane")}
+                  description="From: TP.HCM, Can Tho, Ha Noi, Da Nang"
+                />
+              </Card>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
               <Link to="/ve-tau">
-                <CardStyle hoverable cover={<ImgStyle alt="ship" src={ship} />}>
-                  <Meta title={t("service.boat")} />
-                </CardStyle>
+                <Card hoverable cover={<ImgStyle alt="ship" src={ship} />}>
+                  <Meta
+                    title={t("service.boat")}
+                    description="From: Vung Tau, Can Tho"
+                  />
+                </Card>
               </Link>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
               <Link to="/dat-phong-ks">
-                <CardStyle
-                  hoverable
-                  cover={<ImgStyle alt="hotel" src={hotel} />}
-                >
-                  <Meta title={t("service.hotel")} />
-                </CardStyle>
+                <Card hoverable cover={<ImgStyle alt="hotel" src={hotel} />}>
+                  <Meta
+                    title={t("service.hotel")}
+                    description="More than 100 hotels for your choice"
+                  />
+                </Card>
               </Link>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
               <Link to="/book-tour">
-                <CardStyle hoverable cover={<ImgStyle alt="tour" src={tour} />}>
-                  <Meta title={t("service.tour")} />
-                </CardStyle>
+                <Card hoverable cover={<ImgStyle alt="tour" src={tour} />}>
+                  <Meta title={t("service.tour")} description="Explore tour" />
+                </Card>
               </Link>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
               <Link to="/thue-xe">
-                <CardStyle
-                  hoverable
-                  cover={<ImgStyle alt="hiring" src={bike} />}
-                >
-                  <Meta title={t("service.bike")} />
-                </CardStyle>
+                <Card hoverable cover={<ImgStyle alt="hiring" src={bike} />}>
+                  <Meta
+                    title={t("service.bike")}
+                    description="Car, bikecycle, bike, cano"
+                  />
+                </Card>
               </Link>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <CardStyle hoverable cover={<ImgStyle alt="Test" src={image6} />}>
-                <Meta title="Advanced Options" />
-              </CardStyle>
+              <Card
+                hoverable
+                cover={<ImgStyle alt="Test" src={image6} height={50} />}
+              >
+                <Meta title="Advanced Options" description="More than choice" />
+              </Card>
             </Col>
           </Row>
         </div>
@@ -87,11 +96,6 @@ const Features = () => {
 };
 
 export default Features;
-
-const CardStyle = styled(Card)`
-  border-radius: 5px;
-  overflow: hidden;
-`;
 
 const ImgStyle = styled.img`
   object-fit: cover;

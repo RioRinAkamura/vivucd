@@ -4,13 +4,14 @@ import { BrowserRouter } from "react-router-dom";
 import { App } from "./App";
 import "./index.css";
 import "./locales/i18n";
+import { Spin } from "antd";
 
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Spin className="spinning" />}>
         <App />
       </Suspense>
     </BrowserRouter>
