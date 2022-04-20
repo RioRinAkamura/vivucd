@@ -8,7 +8,11 @@ import hotel from "../../../assets/images/hotel.jpg";
 import ship from "../../../assets/images/ship.jpg";
 import tour from "../../../assets/images/tour.jpg";
 
-import { RightOutlined, LeftOutlined } from "@ant-design/icons";
+import { RightOutlined, LeftOutlined, PhoneOutlined } from "@ant-design/icons";
+import { Avatar, Card, Space } from "antd";
+import { url } from "inspector";
+
+const { Meta } = Card;
 
 const PlaceCarousel = () => {
   const NextArrow = (props: any) => {
@@ -54,6 +58,9 @@ const PlaceCarousel = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          nextArrow: undefined,
+          prevArrow: undefined,
+          dots: true,
         },
       },
       {
@@ -61,67 +68,163 @@ const PlaceCarousel = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          nextArrow: undefined,
+          prevArrow: undefined,
+          dots: true,
         },
       },
     ],
   };
   return (
     <div>
-      <h2> Địa điểm nổi bật</h2>
-      <CarouselWrapper {...settings}>
-        <CardWrapper>
-          <CardItem>
-            <img src={airplane} alt="" height={200} />
-          </CardItem>
-        </CardWrapper>
+      <Wrapper>
+        <h2> Địa điểm tâm linh - Di tích lịch sử</h2>
+        <CarouselWrapper {...settings}>
+          <div>
+            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
 
-        <CardWrapper>
-          <CardItem>
-            <img src={bike} alt="" height={200} />
-          </CardItem>
-        </CardWrapper>
-        <CardWrapper>
-          <CardItem>
-            <img src={hotel} alt="" height={200} />
-          </CardItem>
-        </CardWrapper>
+          <div>
+            <CardItem style={{ backgroundImage: `url(${ship})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
+          <div>
+            <CardItem style={{ backgroundImage: `url(${tour})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
 
-        <CardWrapper>
-          <CardItem>
-            <img src={tour} alt="" height={200} />
-          </CardItem>
-        </CardWrapper>
+          <div>
+            <CardItem style={{ backgroundImage: `url(${image6})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
 
-        <CardWrapper>
-          <CardItem>
-            <img src={image6} alt="" height={200} />
-          </CardItem>
-        </CardWrapper>
-        <CardWrapper>
-          <CardItem>
-            <img src={ship} alt="" height={200} />
-          </CardItem>
-        </CardWrapper>
-      </CarouselWrapper>
+          <div>
+            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
+          <div>
+            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
+        </CarouselWrapper>
+      </Wrapper>
+
+      <Wrapper>
+        <h2> Địa điểm tham quan - nghỉ dưỡng</h2>
+        <CarouselWrapper {...settings}>
+          <div>
+            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
+
+          <div>
+            <CardItem style={{ backgroundImage: `url(${ship})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
+          <div>
+            <CardItem style={{ backgroundImage: `url(${tour})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
+
+          <div>
+            <CardItem style={{ backgroundImage: `url(${image6})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
+
+          <div>
+            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
+          <div>
+            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
+              <CardContent>
+                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
+                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
+              </CardContent>
+            </CardItem>
+          </div>
+        </CarouselWrapper>
+      </Wrapper>
     </div>
   );
 };
 
 export default PlaceCarousel;
 
-const CardWrapper = styled.div`
-  height: 200px;
+const Wrapper = styled.div`
+  margin-bottom: 40px;
 `;
 
 const CardItem = styled.div`
-  height: 100%;
+  height: 300px;
   border-radius: 5px;
   overflow: hidden;
-  background: red;
+  display: flex;
+  align-items: flex-end;
+  background-position: center;
+  background-size: cover;
+  transition: transform 1s;
 
   :hover {
     cursor: pointer;
   }
+`;
+
+const CardContent = styled.div`
+  padding: 24px 24px 0px 24px;
+  color: white;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0.011642156862745057) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
 `;
 
 const CarouselWrapper = styled(Slider)`

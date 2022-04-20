@@ -136,7 +136,9 @@ export const BoatTicket = () => {
           <div
             style={{ display: "flex", justifyContent: "center", marginTop: 24 }}
           >
-            <Button>LIÊN HỆ NGAY</Button>
+            <Button>
+              <a href="tel:+84-869315579">LIÊN HỆ NGAY</a>
+            </Button>
           </div>
         </div>
       </HotlineWrapper>
@@ -195,7 +197,11 @@ export const BoatTicket = () => {
         )}
       />
       <h1>LỊCH CHẠY TÀU CÔN ĐẢO EXPRESS CÁC TUYẾN</h1>
-      <Table dataSource={dataSource} columns={columns} />
+      <Table
+        dataSource={dataSource}
+        columns={columns}
+        style={{ marginBottom: 140 }}
+      />
     </div>
   );
 };
