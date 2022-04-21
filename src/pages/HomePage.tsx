@@ -1,4 +1,5 @@
 import React from "react";
+import { Route } from "react-router-dom";
 import { About } from "../components/About";
 import Contact from "../components/Contact";
 import Faq from "../components/Faq";

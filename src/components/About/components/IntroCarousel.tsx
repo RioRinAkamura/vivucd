@@ -125,7 +125,7 @@ const IntroCarousel = () => {
                   <img
                     src={seafood}
                     alt="seafood"
-                    width={"50%"}
+                    width={"30%"}
                     style={{ paddingTop: 24 }}
                   />
                 </div>

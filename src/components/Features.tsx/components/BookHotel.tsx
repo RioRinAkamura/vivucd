@@ -1,12 +1,42 @@
 import { PhoneOutlined } from "@ant-design/icons";
-import { Avatar, Card, Col, Pagination, Rate, Row, Select } from "antd";
+import {
+  Avatar,
+  Card,
+  Carousel,
+  Col,
+  Pagination,
+  Rate,
+  Row,
+  Select,
+} from "antd";
 import React from "react";
+import Slider from "react-slick";
 import styled from "styled-components";
 
 const { Meta } = Card;
 const { Option } = Select;
 
 const BookHotel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    appendDots: (dots: any) => (
+      <div
+        style={{
+          bottom: 0,
+          textAlign: "center",
+          padding: 0,
+          color: "white",
+        }}
+      >
+        <ul style={{ margin: "auto", padding: 0 }}> {dots} </ul>
+      </div>
+    ),
+  };
+
   return (
     <div className="container-fluid">
       <Row>
@@ -22,12 +52,53 @@ const BookHotel = () => {
       <Row gutter={[16, 16]} style={{ marginBottom: 64 }}>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >
@@ -47,10 +118,50 @@ const BookHotel = () => {
           <Card
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >
@@ -70,10 +181,50 @@ const BookHotel = () => {
           <Card
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >
@@ -93,10 +244,50 @@ const BookHotel = () => {
           <Card
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >
@@ -116,10 +307,50 @@ const BookHotel = () => {
           <Card
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >
@@ -139,10 +370,50 @@ const BookHotel = () => {
           <Card
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >
@@ -162,10 +433,50 @@ const BookHotel = () => {
           <Card
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >
@@ -185,10 +496,50 @@ const BookHotel = () => {
           <Card
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >
@@ -208,10 +559,50 @@ const BookHotel = () => {
           <Card
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >
@@ -231,10 +622,50 @@ const BookHotel = () => {
           <Card
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >
@@ -254,10 +685,50 @@ const BookHotel = () => {
           <Card
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >
@@ -277,10 +748,50 @@ const BookHotel = () => {
           <Card
             hoverable
             cover={
-              <img
-                alt="example"
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+                <div>
+                  <img
+                    alt="example"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/306608556.jpg?k=f7605d74d7c89572302812173a25f5100d004bfd28198226be6065dfa7e961e7&o=&hp=1"
+                    width={"100%"}
+                  />
+                </div>
+              </Slider>
             }
             actions={[<PhoneOutlined key="call" />]}
           >

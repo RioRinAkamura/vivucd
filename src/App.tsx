@@ -14,6 +14,7 @@ import BookHotel from "./components/Features.tsx/components/BookHotel";
 import BookTour from "./components/Features.tsx/components/BookTour";
 import ScrollToTop from "./components/ScrollToTop";
 import HomePage from "./pages/HomePage";
+import AboutDetail from "./components/AboutDetail";
 
 const { Header, Content, Footer } = Layout;
 export function App() {
@@ -28,7 +29,10 @@ export function App() {
           <ScrollToTop>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/vivucd" element={<HomePage />} />
+              <Route path="/:id" element={<AboutDetail />} />
+              <Route path="/vivucd" element={<HomePage />}>
+                <Route path="/vivucd/:id" element={<AboutDetail />} />
+              </Route>
 
               {/* Features Routes */}
               <Route path="/ve-tau" element={<BoatTicket />} />

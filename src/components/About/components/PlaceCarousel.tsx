@@ -1,18 +1,9 @@
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import React from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import styled from "styled-components";
-import image6 from "../../../assets/images/advanced-option.jpg";
-import airplane from "../../../assets/images/airplane.jpg";
-import bike from "../../../assets/images/bike.jpg";
-import hotel from "../../../assets/images/hotel.jpg";
-import ship from "../../../assets/images/ship.jpg";
-import tour from "../../../assets/images/tour.jpg";
-
-import { RightOutlined, LeftOutlined, PhoneOutlined } from "@ant-design/icons";
-import { Avatar, Card, Space } from "antd";
-import { url } from "inspector";
-
-const { Meta } = Card;
+import { historyData, placeData } from "./aboutData";
 
 const PlaceCarousel = () => {
   const NextArrow = (props: any) => {
@@ -80,114 +71,38 @@ const PlaceCarousel = () => {
       <Wrapper>
         <h2> Địa điểm tâm linh - Di tích lịch sử</h2>
         <CarouselWrapper {...settings}>
-          <div>
-            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
-
-          <div>
-            <CardItem style={{ backgroundImage: `url(${ship})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
-          <div>
-            <CardItem style={{ backgroundImage: `url(${tour})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
-
-          <div>
-            <CardItem style={{ backgroundImage: `url(${image6})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
-
-          <div>
-            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
-          <div>
-            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
+          {historyData &&
+            historyData.map((data) => (
+              <Link to={`/${data.id}`} key={data.id}>
+                <CardWrapper>
+                  <CardItem style={{ backgroundImage: `url(${data.image})` }}>
+                    <CardContent>
+                      <h3 style={{ color: "white" }}>{data.title}</h3>
+                      <DescText>{data.desc}</DescText>
+                    </CardContent>
+                  </CardItem>
+                </CardWrapper>
+              </Link>
+            ))}
         </CarouselWrapper>
       </Wrapper>
 
       <Wrapper>
         <h2> Địa điểm tham quan - nghỉ dưỡng</h2>
         <CarouselWrapper {...settings}>
-          <div>
-            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
-
-          <div>
-            <CardItem style={{ backgroundImage: `url(${ship})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
-          <div>
-            <CardItem style={{ backgroundImage: `url(${tour})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
-
-          <div>
-            <CardItem style={{ backgroundImage: `url(${image6})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
-
-          <div>
-            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
-          <div>
-            <CardItem style={{ backgroundImage: `url(${hotel})` }}>
-              <CardContent>
-                <h3 style={{ color: "white" }}>Mộ cô Võ Thị Sáu</h3>
-                <p>Một nơi không thể bỏ qua khi đến với Côn Đảo</p>
-              </CardContent>
-            </CardItem>
-          </div>
+          {placeData &&
+            placeData.map((data) => (
+              <Link to={`/${data.id}`} key={data.id}>
+                <CardWrapper>
+                  <CardItem style={{ backgroundImage: `url(${data.image})` }}>
+                    <CardContent>
+                      <h3 style={{ color: "white" }}>{data.title}</h3>
+                      <DescText>{data.desc}</DescText>
+                    </CardContent>
+                  </CardItem>
+                </CardWrapper>
+              </Link>
+            ))}
         </CarouselWrapper>
       </Wrapper>
     </div>
@@ -200,24 +115,30 @@ const Wrapper = styled.div`
   margin-bottom: 40px;
 `;
 
-const CardItem = styled.div`
+const CardWrapper = styled.div`
   height: 300px;
   border-radius: 5px;
   overflow: hidden;
+`;
+
+const CardItem = styled.div`
+  height: 100%;
   display: flex;
   align-items: flex-end;
   background-position: center;
   background-size: cover;
-  transition: transform 1s;
+  transition: transform 0.5s;
 
   :hover {
     cursor: pointer;
+    transform: scale(1.05);
   }
 `;
 
 const CardContent = styled.div`
   padding: 24px 24px 0px 24px;
   color: white;
+
   background: rgb(0, 0, 0);
   background: linear-gradient(
     0deg,
@@ -225,6 +146,16 @@ const CardContent = styled.div`
     rgba(255, 255, 255, 0.011642156862745057) 100%,
     rgba(255, 255, 255, 1) 100%
   );
+`;
+
+const DescText = styled.p`
+  height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 `;
 
 const CarouselWrapper = styled(Slider)`
