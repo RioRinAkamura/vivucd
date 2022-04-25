@@ -29,8 +29,6 @@ const AboutDetail = () => {
     }
   }, [id]);
 
-  console.log("data", data);
-
   return (
     <div className="container-fluid">
       {data &&
@@ -43,11 +41,11 @@ const AboutDetail = () => {
               {item.bike}
             </p>
 
-            <Row gutter={[8, 32]}>
-              <Col span={12}>
+            <Row gutter={[8, 8]}>
+              <Col md={{ span: 12 }}>
                 <ImgStyle src={item.image} alt="" />
               </Col>
-              <Col span={12}>
+              <Col md={{ span: 12 }}>
                 <Row gutter={[8, 8]}>
                   <Col span={12}>
                     <ImgStyle src={item.image} alt="" />

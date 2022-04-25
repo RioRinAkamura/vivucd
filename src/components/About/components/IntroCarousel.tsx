@@ -106,7 +106,7 @@ const IntroCarousel = () => {
                 <p style={{ textAlign: "justify" }}>
                   {t("about.specilitiesDesc")}
                 </p>
-                <h2> {t("about.foodTitle")}</h2>
+                <h2> {t("about.specialtiesTitle")}</h2>
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >

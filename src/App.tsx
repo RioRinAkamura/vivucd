@@ -29,7 +29,7 @@ export function App() {
           <ScrollToTop>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/:id" element={<AboutDetail />} />
+              <Route path="/about/:id" element={<AboutDetail />} />
               <Route path="/vivucd" element={<HomePage />}>
                 <Route path="/vivucd/:id" element={<AboutDetail />} />
               </Route>
