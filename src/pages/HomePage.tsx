@@ -7,17 +7,15 @@ import Features from "../components/Features.tsx";
 import { Home } from "../components/Home";
 import Pricing from "../components/Pricing";
 import Works from "../components/Works";
+import Wrapper from "../components/Wrapper";
 
 const HomePage = () => {
   return (
     <div>
       <Home />
       <About />
-      <Features />
       <Works />
-      <Faq />
       <Pricing />
-      <Contact />
     </div>
   );
 };

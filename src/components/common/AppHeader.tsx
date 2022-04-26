@@ -1,10 +1,15 @@
 import { Anchor, Button, Drawer, Menu } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link as RouterLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 import logo from "../../assets/images/logo1.png";
+import {
+  MailOutlined,
+  AppstoreOutlined,
+  SettingOutlined,
+} from "@ant-design/icons";
 
-const { Link } = Anchor;
 const { SubMenu } = Menu;
 
 export const AppHeader = () => {
@@ -35,108 +40,87 @@ export const AppHeader = () => {
           </div>
         </a>
         <div className="mobileHidden">
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <Anchor targetOffset={65}>
-              <RouterLink to="/#home">
-                <Link
-                  className="headerMenu"
-                  href="#home"
-                  title={t("navbar.home")}
-                />
-              </RouterLink>
-              <RouterLink to="/#about">
-                <Link
-                  className="headerMenu"
-                  href="#about"
-                  title={t("navbar.about")}
-                />
-              </RouterLink>
-              <RouterLink to="/#services">
-                <Link
-                  className="headerMenu"
-                  href="#booking"
-                  title={t("navbar.services")}
-                />
-              </RouterLink>
-              <RouterLink to="/#pricing">
-                <Link className="headerMenu" href="#pricing" title="Thuê xe" />
-              </RouterLink>
-              <RouterLink to="/#faq">
-                <Link className="headerMenu" href="#faq" title="FAQ" />
-              </RouterLink>
-              <RouterLink to="/#contact">
-                <Link
-                  className="headerMenu"
-                  href="#contact"
-                  title={t("navbar.contact")}
-                />
-              </RouterLink>
-            </Anchor>
-            <Menu expandIcon=" " style={{}}>
-              <SubMenu
-                style={{ textAlign: "right", width: 38 }}
-                title={language}
-              >
-                <Menu.Item onClick={() => onLanguageChange("vi")}>
-                  Tiếng Việt
-                </Menu.Item>
-                <Menu.Item onClick={() => onLanguageChange("en")}>
-                  English
-                </Menu.Item>
-              </SubMenu>
-            </Menu>
-          </div>
+          <Menu
+            // mode="horizontal"
+            defaultSelectedKeys={[]}
+            style={{ display: "flex" }}
+          >
+            <Menu.Item key="home" className="headerMenu">
+              <Link to="/">{t("navbar.home")}</Link>
+            </Menu.Item>
+            <Menu.Item key="dat-ve" className="headerMenu">
+              <Link to="/dat-ve">Đặt vé</Link>
+            </Menu.Item>
+            <Menu.Item key="dat-phong-ks" className="headerMenu">
+              <Link to="/dat-phong-ks">Đặt phòng</Link>
+            </Menu.Item>
+            <Menu.Item key="dat-tour" className="headerMenu">
+              <Link to="/dat-tour">Đặt tour</Link>
+            </Menu.Item>
+            <Menu.Item key="thue-xe" className="headerMenu">
+              <Link to="thue-xe">Thuê xe</Link>
+            </Menu.Item>
+            <Menu.Item key="contact" className="headerMenu">
+              <Link to="/ho-tro">{t("navbar.contact")}</Link>
+            </Menu.Item>
+            <Menu.Item key="faq" className="headerMenu">
+              <Link to="faq">FAQ</Link>
+            </Menu.Item>
+            <Menu.SubMenu key="SubMenu" title={language} className="headerMenu">
+              <Menu.Item key="vi" onClick={() => onLanguageChange("vi")}>
+                Tiếng Việt
+              </Menu.Item>
+              <Menu.Item key="en" onClick={() => onLanguageChange("en")}>
+                English
+              </Menu.Item>
+            </Menu.SubMenu>
+          </Menu>
         </div>
         <div className="mobileVisible">
           <Button type="primary" onClick={showDrawer}>
             <i className="fas fa-bars"></i>
           </Button>
-          <Drawer placement="right" onClose={onClose} visible={visible}>
-            <Anchor targetOffset={65}>
-              <RouterLink to="/#home">
-                <Link
-                  className="headerMenu"
-                  href="#home"
-                  title={t("navbar.home")}
-                />
-              </RouterLink>
-              <RouterLink to="/#about">
-                <Link
-                  className="headerMenu"
-                  href="#about"
-                  title={t("navbar.about")}
-                />
-              </RouterLink>
-              <RouterLink to="/#services">
-                <Link
-                  className="headerMenu"
-                  href="#booking"
-                  title={t("navbar.services")}
-                />
-              </RouterLink>
-              <RouterLink to="/#pricing">
-                <Link className="headerMenu" href="#pricing" title="Thuê xe" />
-              </RouterLink>
-              <RouterLink to="/#faq">
-                <Link className="headerMenu" href="#faq" title="FAQ" />
-              </RouterLink>
-              <RouterLink to="/#contact">
-                <Link
-                  className="headerMenu"
-                  href="#contact"
-                  title={t("navbar.contact")}
-                />
-              </RouterLink>
-            </Anchor>
-            <Menu>
-              <SubMenu title={language}>
-                <Menu.Item onClick={() => onLanguageChange("vi")}>
+          <Drawer
+            title="Menu"
+            placement="right"
+            width={"70%"}
+            onClose={onClose}
+            visible={visible}
+          >
+            <Menu defaultSelectedKeys={["home"]}>
+              <Menu.Item key="home" className="headerMenu" onClick={onClose}>
+                <Link to="/">{t("navbar.home")}</Link>
+              </Menu.Item>
+              <Menu.Item key="dat-ve" className="headerMenu" onClick={onClose}>
+                <Link to="/dat-ve">Đặt vé</Link>
+              </Menu.Item>
+              <Menu.Item
+                key="dat-phong-ks"
+                className="headerMenu"
+                onClick={onClose}
+              >
+                <Link to="/dat-phong-ks">Đặt phòng</Link>
+              </Menu.Item>
+              <Menu.Item key="dat-tour" className="headerMenu">
+                <Link to="/dat-tour">Đặt tour</Link>
+              </Menu.Item>
+              <Menu.Item key="thue-xe" className="headerMenu" onClick={onClose}>
+                <Link to="thue-xe">Thuê xe</Link>
+              </Menu.Item>
+              <Menu.Item key="contact" className="headerMenu" onClick={onClose}>
+                <Link to="/ho-tro">{t("navbar.contact")}</Link>
+              </Menu.Item>
+              <Menu.Item key="faq" className="headerMenu" onClick={onClose}>
+                <Link to="faq">FAQ</Link>
+              </Menu.Item>
+              <Menu.SubMenu key="SubMenu" title={language}>
+                <Menu.Item key="vi" onClick={() => onLanguageChange("vi")}>
                   Tiếng Việt
                 </Menu.Item>
-                <Menu.Item onClick={() => onLanguageChange("en")}>
+                <Menu.Item key="en" onClick={() => onLanguageChange("en")}>
                   English
                 </Menu.Item>
-              </SubMenu>
+              </Menu.SubMenu>
             </Menu>
           </Drawer>
         </div>

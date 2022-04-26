@@ -16,7 +16,7 @@ import styled from "styled-components";
 const { Meta } = Card;
 const { Option } = Select;
 
-const BookHotel = () => {
+const HotelBooking = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -100,11 +100,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -167,11 +163,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -234,11 +226,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -301,11 +289,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -368,11 +352,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -435,11 +415,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -502,11 +478,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -569,11 +541,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -636,11 +604,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -703,11 +667,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -770,11 +730,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -837,11 +793,7 @@ const BookHotel = () => {
                 </div>
               </Slider>
             }
-            actions={[
-              <a href="tel:+84-869315579">
-                <PhoneOutlined key="call" />
-              </a>,
-            ]}
+            actions={[<PhoneOutlined key="call" />]}
           >
             <Meta
               avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
@@ -869,7 +821,7 @@ const BookHotel = () => {
   );
 };
 
-export default BookHotel;
+export default HotelBooking;
 
 const TitleWrapper = styled.div`
   margin-top: 140px;

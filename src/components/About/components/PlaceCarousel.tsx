@@ -92,7 +92,7 @@ const PlaceCarousel = () => {
         <CarouselWrapper {...settings}>
           {placeData &&
             placeData.map((data) => (
-              <Link to={`/about/${data.id}`} key={data.id}>
+              <Link to={`about/${data.id}`} key={data.id}>
                 <CardWrapper>
                   <CardItem style={{ backgroundImage: `url(${data.image})` }}>
                     <CardContent>

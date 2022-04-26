@@ -13,7 +13,7 @@ const Faq = () => {
             Dưới đây là một số câu hỏi thường gặp khi du khách đến với Côn Đảo
           </p>
         </div>
-        <Collapse>
+        <Collapse defaultActiveKey={4}>
           <Panel header="Nên đến Côn Đảo vào thời gian nào?" key="4">
             <p>
               Các tháng 3 - 9 là thời gian biển êm, các trận mưa ở Côn Đảo

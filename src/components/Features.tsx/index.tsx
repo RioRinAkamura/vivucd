@@ -2,7 +2,7 @@ import { Card, Col, Row } from "antd";
 import Meta from "antd/lib/card/Meta";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import image6 from "../../assets/images/advanced-option.jpg";
 import airplane from "../../assets/images/airplane.jpg";
@@ -32,19 +32,21 @@ const Features = () => {
         <div className="contentHolder">
           <Row gutter={[16, 16]}>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <Card
-                hoverable
-                cover={<ImgStyle alt="airplane" src={airplane} />}
-                onClick={onPlaneTicket}
-              >
-                <Meta
-                  title={t("service.plane")}
-                  description="From: TP.HCM, Can Tho, Ha Noi, Da Nang"
-                />
-              </Card>
+              <Link to="/dat-ve/ve-may-bay">
+                <Card
+                  hoverable
+                  cover={<ImgStyle alt="airplane" src={airplane} />}
+                  // onClick={onPlaneTicket}
+                >
+                  <Meta
+                    title={t("service.plane")}
+                    description="From: TP.HCM, Can Tho, Ha Noi, Da Nang"
+                  />
+                </Card>
+              </Link>
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <Link to="/ve-tau">
+              <Link to="ve-tau">
                 <Card hoverable cover={<ImgStyle alt="ship" src={ship} />}>
                   <Meta
                     title={t("service.boat")}
@@ -70,6 +72,7 @@ const Features = () => {
                 </Card>
               </Link>
             </Col>
+
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
               <Link to="/thue-xe">
                 <Card hoverable cover={<ImgStyle alt="hiring" src={bike} />}>
@@ -89,6 +92,7 @@ const Features = () => {
               </Card>
             </Col>
           </Row>
+          <Outlet />
         </div>
       </div>
     </div>
