@@ -126,7 +126,7 @@ export const BoatTicket = () => {
   return (
     <div
       className="container-fluid"
-      style={{ marginTop: 140, textAlign: "center" }}
+      style={{ marginTop: 40, textAlign: "center" }}
     >
       <HotlineWrapper>
         <div style={{ padding: "180px 0px" }}>

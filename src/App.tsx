@@ -1,6 +1,6 @@
 import "animate.css";
 import { Layout } from "antd";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "slick-carousel/slick/slick-theme.css";
@@ -49,12 +49,6 @@ export function App() {
               <Route path="/vivucd" element={<HomePage />}>
                 <Route path="/vivucd/:id" element={<AboutDetail />} />
               </Route>
-
-              {/* Features Routes */}
-              {/* <Route path="/ve-tau" element={<BoatTicket />} />
-              <Route path="/thue-xe" element={<BikeRental />} />
-              <Route path="/dat-phong-ks" element={<BookHotel />} />
-              <Route path="/book-tour" element={<BookTour />} /> */}
             </Routes>
           </ScrollToTop>
         </Content>

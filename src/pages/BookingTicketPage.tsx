@@ -4,14 +4,8 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
-import image6 from "../assets/images/advanced-option.jpg";
 import airplane from "../assets/images/airplane.jpg";
-import bike from "../assets/images/bike.jpg";
-import hotel from "../assets/images/hotel.jpg";
 import ship from "../assets/images/ship.jpg";
-import tour from "../assets/images/tour.jpg";
-import Wrapper from "../components/Wrapper";
-import { PhoneOutlined } from "@ant-design/icons";
 
 const BookingTicketPage = () => {
   const onPlaneTicket = () => {
@@ -25,7 +19,7 @@ const BookingTicketPage = () => {
   };
   const { t } = useTranslation();
   return (
-    <Wrapper id="booking" className="block featureBlock">
+    <div id="booking" className="block featureBlock">
       <div className="container-fluid">
         <div className="titleHolder">
           <h2>{t("service.title")}</h2>
@@ -61,7 +55,7 @@ const BookingTicketPage = () => {
           <Outlet />
         </div>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 

@@ -1,12 +1,11 @@
 import React from "react";
 import Faq from "../components/Faq";
-import Wrapper from "../components/Wrapper";
 
 const FaqPage = () => {
   return (
-    <Wrapper>
+    <div>
       <Faq />
-    </Wrapper>
+    </div>
   );
 };
 

@@ -1,14 +1,5 @@
 import { PhoneOutlined } from "@ant-design/icons";
-import {
-  Avatar,
-  Card,
-  Carousel,
-  Col,
-  Pagination,
-  Rate,
-  Row,
-  Select,
-} from "antd";
+import { Avatar, Card, Col, Pagination, Rate, Row, Select } from "antd";
 import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
@@ -120,6 +111,7 @@ const BookHotel = () => {
         </Col>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
               <Slider {...settings}>
@@ -187,6 +179,7 @@ const BookHotel = () => {
         </Col>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
               <Slider {...settings}>
@@ -254,6 +247,7 @@ const BookHotel = () => {
         </Col>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
               <Slider {...settings}>
@@ -321,6 +315,7 @@ const BookHotel = () => {
         </Col>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
               <Slider {...settings}>
@@ -388,6 +383,7 @@ const BookHotel = () => {
         </Col>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
               <Slider {...settings}>
@@ -455,6 +451,7 @@ const BookHotel = () => {
         </Col>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
               <Slider {...settings}>
@@ -522,6 +519,7 @@ const BookHotel = () => {
         </Col>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
               <Slider {...settings}>
@@ -589,6 +587,7 @@ const BookHotel = () => {
         </Col>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
               <Slider {...settings}>
@@ -656,6 +655,7 @@ const BookHotel = () => {
         </Col>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
               <Slider {...settings}>
@@ -723,6 +723,7 @@ const BookHotel = () => {
         </Col>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
               <Slider {...settings}>
@@ -790,6 +791,7 @@ const BookHotel = () => {
         </Col>
         <Col md={{ span: 6 }} xs={{ span: 24 }} sm={{ span: 12 }}>
           <Card
+            style={{ overflow: "hidden" }}
             hoverable
             cover={
               <Slider {...settings}>
@@ -872,7 +874,7 @@ const BookHotel = () => {
 export default BookHotel;
 
 const TitleWrapper = styled.div`
-  margin-top: 140px;
+  margin-top: 40px;
   width: 100%;
   display: flex;
   justify-content: space-between;

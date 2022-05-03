@@ -20,8 +20,37 @@ const IntroCarousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // prevArrow: <PrevArrow />,
-    // nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          nextArrow: undefined,
+          prevArrow: undefined,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          nextArrow: undefined,
+          prevArrow: undefined,
+          dots: true,
+        },
+      },
+    ],
   };
 
   return (

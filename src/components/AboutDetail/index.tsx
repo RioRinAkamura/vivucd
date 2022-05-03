@@ -74,7 +74,7 @@ const AboutDetail = () => {
 export default AboutDetail;
 
 const Wrapper = styled.div`
-  margin: 140px 0px;
+  margin: 40px 0px;
   text-align: justify;
 `;
 
