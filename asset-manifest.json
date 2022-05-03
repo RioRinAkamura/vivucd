@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vivucd/static/css/main.3548f63b.css",
-    "main.js": "/vivucd/static/js/main.7c80d14d.js",
+    "main.css": "/vivucd/static/css/main.0e79c48b.css",
+    "main.js": "/vivucd/static/js/main.2f6ee97c.js",
     "static/js/787.f1fa3a03.chunk.js": "/vivucd/static/js/787.f1fa3a03.chunk.js",
     "static/media/slide3.png": "/vivucd/static/media/slide3.9caf2831a6a144c2ec74.png",
     "static/media/slide2.png": "/vivucd/static/media/slide2.aa32b6f64c57cfed1919.png",
@@ -21,12 +21,12 @@
     "static/media/slick.woff": "/vivucd/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/vivucd/index.html",
     "static/media/getFetch.cjs": "/vivucd/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.3548f63b.css.map": "/vivucd/static/css/main.3548f63b.css.map",
-    "main.7c80d14d.js.map": "/vivucd/static/js/main.7c80d14d.js.map",
+    "main.0e79c48b.css.map": "/vivucd/static/css/main.0e79c48b.css.map",
+    "main.2f6ee97c.js.map": "/vivucd/static/js/main.2f6ee97c.js.map",
     "787.f1fa3a03.chunk.js.map": "/vivucd/static/js/787.f1fa3a03.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3548f63b.css",
-    "static/js/main.7c80d14d.js"
+    "static/css/main.0e79c48b.css",
+    "static/js/main.2f6ee97c.js"
   ]
 }
