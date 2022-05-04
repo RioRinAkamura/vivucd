@@ -72,7 +72,6 @@ const Features = () => {
                 </Card>
               </Link>
             </Col>
-
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
               <Link to="/thue-xe">
                 <Card hoverable cover={<ImgStyle alt="hiring" src={bike} />}>

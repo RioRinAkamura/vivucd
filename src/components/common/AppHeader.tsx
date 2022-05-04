@@ -4,18 +4,10 @@ import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo1.png";
 
-const { SubMenu } = Menu;
-
 export const AppHeader = () => {
   const { t, i18n } = useTranslation();
 
   const [visible, setVisible] = useState<boolean>(false);
-
-  let activeStyle = {
-    textDecoration: "underline",
-  };
-
-  let activeClassName = "underline";
 
   const showDrawer = () => {
     setVisible(true);
@@ -30,6 +22,7 @@ export const AppHeader = () => {
 
   const onLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
+    setVisible(false);
   };
 
   return (
@@ -48,10 +41,10 @@ export const AppHeader = () => {
           >
             <Menu.Item key="home" className="headerMenu">
               <NavLink
+                to="/"
                 style={({ isActive }) => {
                   return { color: isActive ? "#1890ff" : "" };
                 }}
-                to="/"
               >
                 {t("navbar.home")}
               </NavLink>
@@ -68,50 +61,50 @@ export const AppHeader = () => {
             </Menu.Item>
             <Menu.Item key="dat-phong-ks" className="headerMenu">
               <NavLink
+                to="/dat-phong-ks"
                 style={({ isActive }) => {
                   return { color: isActive ? "#1890ff" : "" };
                 }}
-                to="/dat-phong-ks"
               >
                 Đặt phòng
               </NavLink>
             </Menu.Item>
             <Menu.Item key="dat-tour" className="headerMenu">
               <NavLink
+                to="/dat-tour"
                 style={({ isActive }) => {
                   return { color: isActive ? "#1890ff" : "" };
                 }}
-                to="/dat-tour"
               >
                 Đặt tour
               </NavLink>
             </Menu.Item>
             <Menu.Item key="thue-xe" className="headerMenu">
               <NavLink
+                to="thue-xe"
                 style={({ isActive }) => {
                   return { color: isActive ? "#1890ff" : "" };
                 }}
-                to="thue-xe"
               >
                 Thuê xe
               </NavLink>
             </Menu.Item>
             <Menu.Item key="contact" className="headerMenu">
               <NavLink
+                to="/ho-tro"
                 style={({ isActive }) => {
                   return { color: isActive ? "#1890ff" : "" };
                 }}
-                to="/ho-tro"
               >
                 {t("navbar.contact")}
               </NavLink>
             </Menu.Item>
             <Menu.Item key="faq" className="headerMenu">
               <NavLink
+                to="faq"
                 style={({ isActive }) => {
                   return { color: isActive ? "#1890ff" : "" };
                 }}
-                to="faq"
               >
                 FAQ
               </NavLink>
@@ -151,7 +144,11 @@ export const AppHeader = () => {
               >
                 <Link to="/dat-phong-ks">Đặt phòng</Link>
               </Menu.Item>
-              <Menu.Item key="dat-tour" className="headerMenu">
+              <Menu.Item
+                key="dat-tour"
+                className="headerMenu"
+                onClick={onClose}
+              >
                 <Link to="/dat-tour">Đặt tour</Link>
               </Menu.Item>
               <Menu.Item key="thue-xe" className="headerMenu" onClick={onClose}>

@@ -3,18 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { placeData } from "../About/components/aboutData";
-
-interface AboutDetailProps {
-  // id?: string;
-  // list?: [];
-}
-
-interface AboutData {
-  id: string;
-  title: string;
-  desc: string;
-  image: string;
-}
+import Wrapper from "../Wrapper";
 
 const AboutDetail = () => {
   const { id } = useParams<Record<string, string>>();
@@ -30,53 +19,50 @@ const AboutDetail = () => {
   }, [id]);
 
   return (
-    <div className="container-fluid">
-      {data &&
-        data.map((item: any) => (
-          <Wrapper key={item.id}>
-            <h2>{item.title}</h2>
-            <p>
-              {item.address} &nbsp;&nbsp;&nbsp;
-              <i className="fas fa-motorcycle"></i>&nbsp;
-              {item.bike}
-            </p>
+    <Wrapper>
+      <div className="container-fluid">
+        {data &&
+          data.map((item: any) => (
+            <div key={item.id}>
+              <h2>{item.title}</h2>
+              <p>{item.address} &nbsp;&nbsp;&nbsp; </p>
+              <p>
+                <i className="fas fa-motorcycle"></i>&nbsp;
+                {item.bike}
+              </p>
 
-            <Row gutter={[8, 8]}>
-              <Col md={{ span: 12 }}>
-                <ImgStyle src={item.image} alt="" />
-              </Col>
-              <Col md={{ span: 12 }}>
-                <Row gutter={[8, 8]}>
-                  <Col span={12}>
-                    <ImgStyle src={item.image} alt="" />
-                  </Col>
-                  <Col span={12}>
-                    <ImgStyle src={item.image} alt="" />
-                  </Col>
-                  <Col span={12}>
-                    <ImgStyle src={item.image} alt="" />
-                  </Col>
-                  <Col span={12}>
-                    <ImgStyle src={item.image} alt="" />
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-            <br />
-            <h3>Giới thiệu chung</h3>
-            <p>{item.desc}</p>
-          </Wrapper>
-        ))}
-    </div>
+              <Row gutter={[8, 8]}>
+                <Col md={{ span: 12 }}>
+                  <ImgStyle src={item.image} alt="" />
+                </Col>
+                <Col md={{ span: 12 }}>
+                  <Row gutter={[8, 8]}>
+                    <Col span={12}>
+                      <ImgStyle src={item.image} alt="" />
+                    </Col>
+                    <Col span={12}>
+                      <ImgStyle src={item.image} alt="" />
+                    </Col>
+                    <Col span={12}>
+                      <ImgStyle src={item.image} alt="" />
+                    </Col>
+                    <Col span={12}>
+                      <ImgStyle src={item.image} alt="" />
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+              <br />
+              <h3>Giới thiệu chung</h3>
+              <p>{item.desc}</p>
+            </div>
+          ))}
+      </div>
+    </Wrapper>
   );
 };
 
 export default AboutDetail;
-
-const Wrapper = styled.div`
-  margin: 40px 0px;
-  text-align: justify;
-`;
 
 const ImgStyle = styled.img`
   height: 100%;
@@ -85,6 +71,5 @@ const ImgStyle = styled.img`
 
   :hover {
     opacity: 0.8;
-    /* cursor: pointer; */
   }
 `;

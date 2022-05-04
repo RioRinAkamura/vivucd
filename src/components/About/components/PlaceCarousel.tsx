@@ -157,20 +157,7 @@ const DescText = styled.p`
   -webkit-box-orient: vertical;
 `;
 
-const CarouselWrapper = styled(Slider)`
-  /* > .slick-dots li button {
-    width: 16px;
-    height: 4px;
-    /* border-radius: 100%; */
-  /* background: #8b8b8b; */
-  /* } */
-  /* > .slick-dots li.slick-active button { */
-  /* width: 24px; */
-  /* height: 4px; */
-  /* border-radius: 100%; */
-  /* background: #1890ff; */
-  /* } */
-`;
+const CarouselWrapper = styled(Slider)``;
 
 const CarouselArrow = styled.div`
   background: white;
@@ -187,6 +174,5 @@ const CarouselArrow = styled.div`
 
   :hover {
     background: white;
-    opacity: 0.7;
   }
 `;
