@@ -42,6 +42,7 @@ export const Home = () => {
                 style={{
                   color: "white",
                   textAlign: "justify",
+                  margin: "8px 0px",
                 }}
               >
                 {t("home.text")}

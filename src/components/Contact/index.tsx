@@ -4,10 +4,10 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div id="contact" className="block contactBlock">
-      <div className="container-fluid">
+    <div className="container-fluid">
+      <div className="contactBlock">
         <div className="titleHolder">
-          <h2>Liên hệ hỗ trợ</h2>
+          <h2>LIÊN HỆ HỖ TRỢ</h2>
           <p>Điền thông tin và nội dung thắc mắc để được hỗ trợ, xin cảm ơn!</p>
         </div>
         <Form

@@ -1,8 +1,9 @@
 import React from "react";
+import Wrapper from "../components/Wrapper";
 
 const AboutPage = () => {
   return (
-    <div>
+    <Wrapper>
       <h1>AboutPage</h1>
       <h1>AboutPage</h1>
       <h1>AboutPage</h1>
@@ -15,7 +16,7 @@ const AboutPage = () => {
       <h1>AboutPage</h1>
       <h1>AboutPage</h1>
       <h1>AboutPage</h1>
-    </div>
+    </Wrapper>
   );
 };
 

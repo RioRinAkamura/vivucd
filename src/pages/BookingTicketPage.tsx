@@ -6,6 +6,7 @@ import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import airplane from "../assets/images/airplane.jpg";
 import ship from "../assets/images/ship.jpg";
+import Wrapper from "../components/Wrapper";
 
 const BookingTicketPage = () => {
   const onPlaneTicket = () => {
@@ -19,7 +20,7 @@ const BookingTicketPage = () => {
   };
   const { t } = useTranslation();
   return (
-    <div id="booking" className="block featureBlock">
+    <Wrapper>
       <div className="container-fluid">
         <div className="titleHolder">
           <h2>{t("service.title")}</h2>
@@ -28,7 +29,7 @@ const BookingTicketPage = () => {
         <div className="contentHolder">
           <Row gutter={[16, 16]}>
             <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 12 }}>
-              {/* <Link to="/dat-ve/ve-may-bay"> */}
+              {/* <Link to="ve-may-bay"> */}
               <Card
                 hoverable
                 cover={<ImgStyle alt="airplane" src={airplane} />}
@@ -55,7 +56,7 @@ const BookingTicketPage = () => {
           <Outlet />
         </div>
       </div>
-    </div>
+    </Wrapper>
   );
 };
 

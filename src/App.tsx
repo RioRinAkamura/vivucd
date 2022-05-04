@@ -14,6 +14,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import AboutPage from "./pages/AboutPage";
 import BikeRentalPage from "./pages/BikeRentalPage";
 import BookingTicketPage from "./pages/BookingTicketPage";
+import BookingTourPage from "./pages/BookingTourPage";
 import ContactPage from "./pages/ContactPage";
 import FaqPage from "./pages/FaqPage";
 import HomePage from "./pages/HomePage";
@@ -37,6 +38,8 @@ export function App() {
               <Route path="dat-ve/ve-tau" element={<BoatTicket />} />
 
               <Route path="/dat-phong-ks" element={<HotelBookingPage />} />
+
+              <Route path="/dat-tour" element={<BookingTourPage />} />
 
               <Route path="thue-xe" element={<BikeRentalPage />} />
               <Route path="thue-xe/xe-may" element={<BikeRentalPage />} />

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const WrapperComponent = styled.div`
-  margin: 100px 0px;
+  margin: 120px 0px;
 `;
 
 const Wrapper = (props: any) => {

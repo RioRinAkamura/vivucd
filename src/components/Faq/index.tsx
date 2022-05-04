@@ -5,8 +5,8 @@ const { Panel } = Collapse;
 
 const Faq = () => {
   return (
-    <div id="faq" className="block faqBlock">
-      <div className="container-fluid">
+    <div className="container-fluid">
+      <div className="faqBlock">
         <div className="titleHolder">
           <h2>Câu hỏi thường gặp (FAQ)</h2>
           <p>

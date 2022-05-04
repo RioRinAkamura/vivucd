@@ -1,14 +1,8 @@
-import { Anchor, Button, Drawer, Menu } from "antd";
+import { Button, Drawer, Menu } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo1.png";
-import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
 
 const { SubMenu } = Menu;
 
@@ -16,6 +10,13 @@ export const AppHeader = () => {
   const { t, i18n } = useTranslation();
 
   const [visible, setVisible] = useState<boolean>(false);
+
+  let activeStyle = {
+    textDecoration: "underline",
+  };
+
+  let activeClassName = "underline";
+
   const showDrawer = () => {
     setVisible(true);
   };
@@ -34,11 +35,11 @@ export const AppHeader = () => {
   return (
     <div className="container-fluid">
       <div className="header">
-        <a href="/">
+        <Link to="/">
           <div className="logo">
             <img src={logo} alt="" height={64} />
           </div>
-        </a>
+        </Link>
         <div className="mobileHidden">
           <Menu
             // mode="horizontal"
@@ -46,25 +47,74 @@ export const AppHeader = () => {
             style={{ display: "flex" }}
           >
             <Menu.Item key="home" className="headerMenu">
-              <Link to="/">{t("navbar.home")}</Link>
+              <NavLink
+                style={({ isActive }) => {
+                  return { color: isActive ? "#1890ff" : "" };
+                }}
+                to="/"
+              >
+                {t("navbar.home")}
+              </NavLink>
             </Menu.Item>
             <Menu.Item key="dat-ve" className="headerMenu">
-              <Link to="/dat-ve">Đặt vé</Link>
+              <NavLink
+                to="/dat-ve"
+                style={({ isActive }) => {
+                  return { color: isActive ? "#1890ff" : "" };
+                }}
+              >
+                Đặt vé
+              </NavLink>
             </Menu.Item>
             <Menu.Item key="dat-phong-ks" className="headerMenu">
-              <Link to="/dat-phong-ks">Đặt phòng</Link>
+              <NavLink
+                style={({ isActive }) => {
+                  return { color: isActive ? "#1890ff" : "" };
+                }}
+                to="/dat-phong-ks"
+              >
+                Đặt phòng
+              </NavLink>
             </Menu.Item>
             <Menu.Item key="dat-tour" className="headerMenu">
-              <Link to="/dat-tour">Đặt tour</Link>
+              <NavLink
+                style={({ isActive }) => {
+                  return { color: isActive ? "#1890ff" : "" };
+                }}
+                to="/dat-tour"
+              >
+                Đặt tour
+              </NavLink>
             </Menu.Item>
             <Menu.Item key="thue-xe" className="headerMenu">
-              <Link to="thue-xe">Thuê xe</Link>
+              <NavLink
+                style={({ isActive }) => {
+                  return { color: isActive ? "#1890ff" : "" };
+                }}
+                to="thue-xe"
+              >
+                Thuê xe
+              </NavLink>
             </Menu.Item>
             <Menu.Item key="contact" className="headerMenu">
-              <Link to="/ho-tro">{t("navbar.contact")}</Link>
+              <NavLink
+                style={({ isActive }) => {
+                  return { color: isActive ? "#1890ff" : "" };
+                }}
+                to="/ho-tro"
+              >
+                {t("navbar.contact")}
+              </NavLink>
             </Menu.Item>
             <Menu.Item key="faq" className="headerMenu">
-              <Link to="faq">FAQ</Link>
+              <NavLink
+                style={({ isActive }) => {
+                  return { color: isActive ? "#1890ff" : "" };
+                }}
+                to="faq"
+              >
+                FAQ
+              </NavLink>
             </Menu.Item>
             <Menu.SubMenu key="SubMenu" title={language} className="headerMenu">
               <Menu.Item key="vi" onClick={() => onLanguageChange("vi")}>
