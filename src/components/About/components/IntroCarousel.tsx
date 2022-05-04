@@ -35,8 +35,7 @@ const IntroCarousel = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          nextArrow: undefined,
-          prevArrow: undefined,
+          arrows: false,
           dots: true,
         },
       },
@@ -45,8 +44,7 @@ const IntroCarousel = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          nextArrow: undefined,
-          prevArrow: undefined,
+          arrows: false,
           dots: true,
         },
       },
@@ -94,7 +92,7 @@ const IntroCarousel = () => {
           <div>
             <Row gutter={[16, 16]} style={{ display: "flex" }}>
               <Col md={{ span: 12 }}>
-                <img src={slide3} alt="natural" width={"100%"} />
+                <img src={slide3} alt="history" width={"100%"} />
               </Col>
               <Col md={{ span: 12 }}>
                 <h2>{t("about.historyTitle")}</h2>
@@ -128,7 +126,7 @@ const IntroCarousel = () => {
           <div>
             <Row gutter={[16, 16]} style={{ display: "flex" }}>
               <Col md={{ span: 12 }}>
-                <img src={slide2} alt="natural" width={"100%"} />
+                <img src={slide2} alt="specialties" width={"80%"} />
               </Col>
               <Col md={{ span: 12 }}>
                 <h2> {t("about.specialtiesTitle")}</h2>
