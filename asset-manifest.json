@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vivucd/static/css/main.0e79c48b.css",
-    "main.js": "/vivucd/static/js/main.98a8628c.js",
+    "main.css": "/vivucd/static/css/main.1ea69e2f.css",
+    "main.js": "/vivucd/static/js/main.68eb58a4.js",
     "static/js/787.f1fa3a03.chunk.js": "/vivucd/static/js/787.f1fa3a03.chunk.js",
     "static/media/slide3.png": "/vivucd/static/media/slide3.9caf2831a6a144c2ec74.png",
     "static/media/slide2.png": "/vivucd/static/media/slide2.aa32b6f64c57cfed1919.png",
@@ -11,7 +11,9 @@
     "static/media/bg-works.jpg": "/vivucd/static/media/bg-works.0e4837e61cf0a239a4c1.jpg",
     "static/media/boat.jpg": "/vivucd/static/media/boat.16a2ab88f24583239c4f.jpg",
     "static/media/ship.jpg": "/vivucd/static/media/ship.144dcbd52d5c8a69a50c.jpg",
+    "static/media/du-lich2.jpg": "/vivucd/static/media/du-lich2.d44f8ebb2715870d150d.jpg",
     "static/media/seafood.png": "/vivucd/static/media/seafood.1cfc10ad79608a88812a.png",
+    "static/media/du-lich1.jpg": "/vivucd/static/media/du-lich1.f2bff54c795389db3458.jpg",
     "static/media/airplane.jpg": "/vivucd/static/media/airplane.011c6000814d2a032bff.jpg",
     "static/media/tuong.png": "/vivucd/static/media/tuong.9ae489e1536e755ab1d3.png",
     "static/media/logo1.png": "/vivucd/static/media/logo1.b04e72595725d10d7ec0.png",
@@ -21,12 +23,12 @@
     "static/media/slick.woff": "/vivucd/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/vivucd/index.html",
     "static/media/getFetch.cjs": "/vivucd/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.0e79c48b.css.map": "/vivucd/static/css/main.0e79c48b.css.map",
-    "main.98a8628c.js.map": "/vivucd/static/js/main.98a8628c.js.map",
+    "main.1ea69e2f.css.map": "/vivucd/static/css/main.1ea69e2f.css.map",
+    "main.68eb58a4.js.map": "/vivucd/static/js/main.68eb58a4.js.map",
     "787.f1fa3a03.chunk.js.map": "/vivucd/static/js/787.f1fa3a03.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e79c48b.css",
-    "static/js/main.98a8628c.js"
+    "static/css/main.1ea69e2f.css",
+    "static/js/main.68eb58a4.js"
   ]
 }
